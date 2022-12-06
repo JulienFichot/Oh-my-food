@@ -32,8 +32,8 @@
     </header>
     <section>
       <div class="bloc_fonctionnement">
-        <h2>Fonctionnement</h2>
-        <div class="buttons_fonctionnement">
+        <h2 class="main_page_h2">Fonctionnement</h2>
+        <div>
           <button>
             <p>1</p>
             <i class="fa-solid fa-mobile-screen-button"></i>
@@ -52,25 +52,42 @@
         </div>
       </div>
       <div class="bloc_restaurant">
-        <h2>Restaurants</h2>
+        <h2 class="main_page_h2">Restaurants</h2>
         <div class="restaurants">
-          <article class="card_restaurant">
-            <img
-              src="./assets/images/la_palette_du_gout.jpg"
-              alt="image la palette du gout"
-              class="image_restaurant"
-            />
-            <h3>La palette du goût</h3>
-            <p>Ménilmontant</p>
-          </article>
+          <a href="./restaurants/menu_la_palette_du_gout.html">
+            <article class="card_restaurant">
+              <img
+                src="./assets/images/la_palette_du_gout.jpg"
+                alt="image la palette du gout"
+                class="image_restaurant"
+              />
+
+              <div class="content_card">
+                <div class="text_card">
+                  <h3>La palette du goût</h3>
+                  <p>Ménilmontant</p>
+                </div>
+
+                <p><i class="fa-regular fa-heart"></i></p>
+              </div>
+            </article>
+          </a>
           <article class="card_restaurant">
             <img
               src="./assets/images/la_note_enchantée.jpg"
               alt="image la note enchantée"
               class="image_restaurant"
             />
-            <h3>La note enchantée</h3>
-            <p>Charonne</p>
+            <div class="content_card">
+              <div class="text_card">
+                <h3>La note enchantée</h3>
+                <p>Charonne</p>
+              </div>
+              <p id="heart">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-regular fa-heart"></i>
+              </p>
+            </div>
           </article>
           <article class="card_restaurant">
             <img
@@ -78,8 +95,13 @@
               alt="image à la francaise"
               class="image_restaurant"
             />
-            <h3>À la francaise</h3>
-            <p>Cité Rouge</p>
+            <div class="content_card">
+              <div class="text_card">
+                <h3>À la francaise</h3>
+                <p>Cité Rouge</p>
+              </div>
+              <p><i class="fa-regular fa-heart"></i></p>
+            </div>
           </article>
           <article class="card_restaurant">
             <img
@@ -87,8 +109,13 @@
               alt="image le delice des sens"
               class="image_restaurant"
             />
-            <h3>Le délice des sens</h3>
-            <p>Folie-Méricourt</p>
+            <div class="content_card">
+              <div class="text_card">
+                <h3>Le délice des sens</h3>
+                <p>Folie-Méricourt</p>
+              </div>
+              <p><i class="fa-regular fa-heart"></i></p>
+            </div>
           </article>
         </div>
       </div>
