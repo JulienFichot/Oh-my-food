@@ -19,9 +19,15 @@ body {
 h1 {
   font-family: "shrikhand";
   text-align: center;
-  padding: 2% 0;
 }
 
+.h1_menu {
+  font-family: "shrikhand";
+  text-align: center;
+  padding: 0;
+}
+
+/* END HEADER */
 .loc {
   background-color: #eaeaea;
   margin-top: -1rem;
@@ -33,7 +39,6 @@ h1 {
   padding-left: 3%;
 }
 
-/* END HEADER */
 /* RESERVATION */
 .bloc_reservation {
   text-align: center;
@@ -65,6 +70,10 @@ h1 {
   margin-top: 3%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
+.bloc_reservation button:hover {
+  background: linear-gradient(180deg, #ff99e2 0%, #dc7bff 100%);
+  box-shadow: 1px 11px 14px 0px rgba(109, 109, 109, 0.7);
+}
 
 /* END RESERVATION */
 /* FONCTIONNEMENT */
@@ -74,7 +83,8 @@ h1 {
 }
 .bloc_fonctionnement button {
   background-color: #f7f7f7;
-  border: 2px solid #f7f7f7;
+  border: 0px transparent solid;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   width: 90%;
   margin: 3% 5%;
@@ -88,9 +98,12 @@ h1 {
 .bloc_fonctionnement button:hover {
   background-color: #f5edff;
 }
+.bloc_fonctionnement button:hover:hover .fa-solid {
+  color: #9356dc;
+}
 .bloc_fonctionnement p {
   background-color: #9356dc;
-  border: 1px solid #9356dc;
+  border: 1px solid transparent;
   border-radius: 50%;
   color: white;
   width: 5%;
@@ -133,6 +146,32 @@ h1 {
   border: 0px solid transparent;
   margin: 8% 5%;
 }
+.bloc_restaurant .card_restaurant .content_card {
+  display: flex;
+  flex-direction: row;
+}
+.bloc_restaurant .card_restaurant .content_card .text_card {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.bloc_restaurant .card_restaurant .content_card .text_card h3 {
+  color: black;
+  text-decoration: none;
+}
+.bloc_restaurant .card_restaurant .content_card .text_card p {
+  color: black;
+  text-decoration: none;
+}
+.bloc_restaurant .card_restaurant .button_nouveau {
+  border: 1px #99e2d0 solid;
+  background-color: #99e2d0;
+  color: #008766;
+  position: absolute;
+  right: 30px;
+  border-radius: 2px;
+  margin-top: 8px;
+}
 .bloc_restaurant .card_restaurant .image_restaurant {
   width: 100%;
   height: 70%;
@@ -143,9 +182,18 @@ h1 {
   padding-left: 3%;
   margin: 0;
   font-weight: bolder;
+  padding-top: 10px;
 }
 .bloc_restaurant .card_restaurant p {
   padding-left: 3%;
+}
+.bloc_restaurant .card_restaurant span {
+  font-size: 30px;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+.bloc_restaurant a {
+  text-decoration: none;
 }
 
 /* END RESTAURANT */
@@ -154,21 +202,33 @@ footer {
   width: 100%;
   background: #353535;
   color: white;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
 }
 footer h2 {
   font-family: "shrikhand";
-  padding-top: 4%;
-  padding-left: 10%;
+  padding: 4% 0;
   margin: 0;
 }
 footer ul {
   list-style-type: none;
+  padding: 0;
+  padding-bottom: 10px;
+}
+footer li {
+  padding-bottom: 10px;
+}
+footer li a {
+  text-decoration: none;
+  color: white;
 }
 footer .fa-solid,
 footer .fas {
   font-weight: 900;
-  padding-right: 5%;
+  padding-right: 6px;
+}
+
+.content_footer {
+  padding-left: 5%;
 }
 
 /* END FOOTER */
@@ -176,27 +236,39 @@ footer .fas {
 .title {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .left_arrow {
-  font-size: 2rem;
-  padding-right: 100;
-  padding-left: 20px;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  left: 10px;
 }
 
 header img {
   width: 100%;
   height: 275px;
+  object-fit: cover;
 }
 
 .block_menu {
   margin-top: -4rem;
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
-  z-index: 1;
   position: relative;
   width: 100%;
   padding: 0;
+}
+.block_menu .border_title {
+  border-bottom: 2px solid #99e2d0;
+  width: 30px;
+  width: 50px;
+  margin-left: 5%;
 }
 .block_menu .title_restaurant {
   display: flex;
@@ -205,8 +277,8 @@ header img {
 }
 .block_menu .title_restaurant h2 {
   width: 90%;
-  padding-left: 0;
-  padding-top: 10%;
+  padding-left: 10px;
+  padding-top: 5%;
   font-size: 30px;
   line-height: 28.13px;
 }
@@ -216,23 +288,46 @@ header img {
 }
 .block_menu h3 {
   padding-left: 5%;
+  margin-bottom: 5px;
 }
 .block_menu .card_menu {
-  border: 2px solid transparent;
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-  border-radius: 0.75rem;
+  border: 0 solid transparent;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
   background-color: #ffffff;
   margin: 5% 5%;
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-end;
-  padding: 10px;
+  animation: slide_one 5s forwards;
+  opacity: 0;
+  padding-left: 5px;
+  height: 70px;
 }
-.block_menu .card_menu p {
-  margin: 0;
+.block_menu .card_menu:hover .menu_selection {
+  width: 5rem;
+  opacity: 1;
+  margin-left: 3%;
+}
+.block_menu .card_menu:hover .fa-circle-check {
+  font-size: 30px;
+}
+.block_menu .card_menu:hover .menu_text {
+  width: 90%;
 }
 .block_menu .card_menu .menu_text {
   width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.block_menu .card_menu .menu_text p {
+  width: 80%;
+  margin: 0;
+  padding: 3% 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .block_menu .card_menu h4 {
   font-weight: bold;
@@ -251,7 +346,7 @@ header img {
 .button_menu {
   border: 0;
   padding: 0.75rem 1.5rem;
-  margin: 10% 32%;
+  margin: 10% 30%;
   font-weight: 500;
   font-size: 1.1rem;
   border-radius: 100px;
@@ -260,37 +355,116 @@ header img {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
-
-.text_card {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
+.button_menu:hover {
+  background: linear-gradient(180deg, #ff99e2 0%, #dc7bff 100%);
+  box-shadow: 1px 11px 14px 0px rgba(109, 109, 109, 0.7);
 }
 
-.content_card {
-  display: flex;
-  flex-direction: row;
-}
-
-#heart:active .fa-regular.fa-heart,
+#heart:hover .fa-regular.fa-heart,
 #heart .fa-solid.fa-heart {
   display: none;
 }
 
-#heart:active .fa-solid.fa-heart {
+#heart:hover .fa-solid.fa-heart {
   display: inline;
   color: #9356dc;
 }
 
+.fa-regular.fa-heart {
+  color: black;
+}
+
+.menu_selection {
+  width: 10;
+  height: 100%;
+  opacity: 0;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+  margin-left: auto;
+  transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+.menu_selection p {
+  margin: 0;
+}
+
+.fa-circle-check {
+  margin-top: 18px;
+  margin-left: 15px;
+  font-size: 0px;
+  color: white;
+}
+
+.heart_menu {
+  font-size: 30px;
+  padding-right: 10px;
+}
+
+.heart_menu:hover .fa-regular.fa-heart,
+.heart_menu .fa-solid.fa-heart {
+  display: none;
+}
+
+.heart_menu:hover .fa-solid.fa-heart {
+  display: inline;
+  color: #9356dc;
+}
+
+@keyframes slide_one {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+@keyframes slide_two {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+@keyframes slide_three {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+.animation_entree {
+  animation: slide_two 10s forwards;
+}
+
 /* ICONES 
+
+
 téléphone =<i class="fa-solid fa-mobile-screen-button"></i>
 liste= <i class="fa-solid fa-list"></i>
 boutique=<i class="fa-sharp fa-solid fa-store"></i>
 ustensiles=<i class="fa-solid fa-utensils"></i>
 poignée de mains=<i class="fa-solid fa-handshake-angle"></i>
 flèche gauche=<i class="fa-solid fa-arrow-left"></i>
+check=<i class="fa-solid fa-circle-check"></i>
 coeur=<i class="fa-thin fa-heart"></i>
+coeur plein=<i class="fa-solid fa-heart"></i>
+
 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .bloc_fonctionnement {
+    width: 100%;
+  }
+  .button_fonctionnement {
+    display: flex;
+  }
+}
 /*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */
