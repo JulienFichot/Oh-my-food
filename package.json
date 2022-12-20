@@ -1,8 +1,26 @@
 {
-  "dependencies": {
-    "sass": "^1.56.1"
-  },
+  "name": "julien_fichot_4_10112022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./assets/css/style.css"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass sass/main.scss assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulienFichot/julien_fichot_4_10112022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulienFichot/julien_fichot_4_10112022/issues"
+  },
+  "homepage": "https://github.com/JulienFichot/julien_fichot_4_10112022#readme",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  },
+  "dependencies": {
+    "node-sass": "^8.0.0"
   }
 }
