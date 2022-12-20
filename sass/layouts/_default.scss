@@ -112,10 +112,13 @@ h1 {
       color: $primary;
     }
   }
-  h3 {
+  strong {
     font-family: "roboto";
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
   }
-  p {
+  span {
     background-color: $primary;
     border: 1px solid transparent;
     border-radius: 20px;
@@ -184,11 +187,12 @@ h1 {
       }
     }
     .button_nouveau {
+      font-size: large;
       border: 1px $tertiary solid;
       background-color: $tertiary;
       color: #008766;
       position: absolute;
-      right: 20px;
+      right: 0px;
       border-radius: 2px;
       margin-top: 8px;
     }
@@ -412,21 +416,39 @@ header img {
   }
 }
 
-#heart:hover .fa-regular.fa-heart,
-#heart .fa-solid.fa-heart {
+.heart:hover .fa-regular.fa-heart,
+.heart .fa-solid.fa-heart,
+.heart_menu:hover .fa-regular.fa-heart,
+.heart_menu .fa-solid.fa-heart {
   display: none;
+  opacity: 100%;
 }
-#heart:hover .fa-solid.fa-heart {
+.heart:hover .fa-solid.fa-heart,
+.heart_menu:hover .fa-solid.fa-heart {
   display: inline;
-  color: $primary;
+  color: transparent;
+  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .fa-regular.fa-heart {
   color: black;
+  transition: opacity 0.3s ease-in-out;
+  position: relative;
+}
+
+.fa-solid.fa-heart {
+  transition: color 10s ease-in-out;
+}
+
+.heart_menu {
+  font-size: 30px;
+  margin: 0 10px;
 }
 
 .menu_selection {
-  width: 10;
+  width: 10px;
   height: 100%;
   opacity: 0;
   background-color: $tertiary;
@@ -437,19 +459,6 @@ header img {
   p {
     margin: 0;
   }
-}
-
-.heart_menu {
-  font-size: 30px;
-  margin-right: 10%;
-}
-.heart_menu:hover .fa-regular.fa-heart,
-.heart_menu .fa-solid.fa-heart {
-  display: none;
-}
-.heart_menu:hover .fa-solid.fa-heart {
-  display: inline;
-  color: $primary;
 }
 
 /* ICONES 
@@ -553,7 +562,7 @@ coeur plein=<i class="fa-solid fa-heart"></i>
 
 @keyframes spin_three {
   0% {
-    transform: rotate(Odeg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
@@ -624,7 +633,7 @@ coeur plein=<i class="fa-solid fa-heart"></i>
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .button_fonctionnement {
     display: flex;
     flex-wrap: wrap;
@@ -645,7 +654,7 @@ coeur plein=<i class="fa-solid fa-heart"></i>
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .button_fonctionnement {
     display: flex;
     flex-direction: row;
@@ -691,6 +700,9 @@ coeur plein=<i class="fa-solid fa-heart"></i>
   .block_menu {
     width: 80%;
     margin-left: 10%;
+    .title_restaurant {
+      padding: 0 25%;
+    }
   }
 }
 

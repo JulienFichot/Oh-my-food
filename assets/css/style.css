@@ -108,10 +108,13 @@ h1 {
 .bloc_fonctionnement button:hover:hover .fa-solid {
   color: #9356dc;
 }
-.bloc_fonctionnement h3 {
+.bloc_fonctionnement strong {
   font-family: "roboto";
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
-.bloc_fonctionnement p {
+.bloc_fonctionnement span {
   background-color: #9356dc;
   border: 1px solid transparent;
   border-radius: 20px;
@@ -180,11 +183,12 @@ h1 {
   margin-top: 1%;
 }
 .bloc_restaurant .card_restaurant .button_nouveau {
+  font-size: large;
   border: 1px #99e2d0 solid;
   background-color: #99e2d0;
   color: #008766;
   position: absolute;
-  right: 20px;
+  right: 0px;
   border-radius: 2px;
   margin-top: 8px;
 }
@@ -377,22 +381,40 @@ header img {
   box-shadow: 1px 11px 14px 0px rgba(109, 109, 109, 0.7);
 }
 
-#heart:hover .fa-regular.fa-heart,
-#heart .fa-solid.fa-heart {
+.heart:hover .fa-regular.fa-heart,
+.heart .fa-solid.fa-heart,
+.heart_menu:hover .fa-regular.fa-heart,
+.heart_menu .fa-solid.fa-heart {
   display: none;
+  opacity: 100%;
 }
 
-#heart:hover .fa-solid.fa-heart {
+.heart:hover .fa-solid.fa-heart,
+.heart_menu:hover .fa-solid.fa-heart {
   display: inline;
-  color: #9356dc;
+  color: transparent;
+  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .fa-regular.fa-heart {
   color: black;
+  transition: opacity 0.3s ease-in-out;
+  position: relative;
+}
+
+.fa-solid.fa-heart {
+  transition: color 10s ease-in-out;
+}
+
+.heart_menu {
+  font-size: 30px;
+  margin: 0 10px;
 }
 
 .menu_selection {
-  width: 10;
+  width: 10px;
   height: 100%;
   opacity: 0;
   background-color: #99e2d0;
@@ -402,21 +424,6 @@ header img {
 }
 .menu_selection p {
   margin: 0;
-}
-
-.heart_menu {
-  font-size: 30px;
-  margin-right: 10%;
-}
-
-.heart_menu:hover .fa-regular.fa-heart,
-.heart_menu .fa-solid.fa-heart {
-  display: none;
-}
-
-.heart_menu:hover .fa-solid.fa-heart {
-  display: inline;
-  color: #9356dc;
 }
 
 /* ICONES 
@@ -518,7 +525,7 @@ coeur plein=<i class="fa-solid fa-heart"></i>
 }
 @keyframes spin_three {
   0% {
-    transform: rotate(Odeg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
@@ -587,7 +594,7 @@ coeur plein=<i class="fa-solid fa-heart"></i>
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .button_fonctionnement {
     display: flex;
     flex-wrap: wrap;
@@ -606,7 +613,7 @@ coeur plein=<i class="fa-solid fa-heart"></i>
   }
 }
 /* Desktops and laptops ----------- */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .button_fonctionnement {
     display: flex;
     flex-direction: row;
@@ -648,6 +655,9 @@ coeur plein=<i class="fa-solid fa-heart"></i>
   .block_menu {
     width: 80%;
     margin-left: 10%;
+  }
+  .block_menu .title_restaurant {
+    padding: 0 25%;
   }
 }
 /*# sourceMappingURL=style.css.map */
