@@ -215,6 +215,7 @@ h1 {
       font-size: 30px;
       margin-right: 20px;
       margin-top: 15px;
+      padding-right: 0;
     }
   }
   a {
@@ -313,11 +314,12 @@ header img {
     display: flex;
     align-items: baseline;
     font-family: "shrikhand";
+    padding: 2% 5%;
+    justify-content: space-between;
 
     h2 {
       width: 90%;
-      padding-left: 10%;
-      padding-top: 5%;
+
       font-size: 30px;
       line-height: 28.13px;
     }
@@ -417,6 +419,12 @@ header img {
   }
 }
 
+/* ANIMATION COEUR */
+
+.heart_menu {
+  font-size: 30px;
+}
+
 .heart_menu:hover {
   display: inline;
 }
@@ -429,15 +437,20 @@ header img {
 
 .heart_menu:hover .fa-solid.fa-heart {
   display: inline;
-  color: transparent;
   background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
   background-repeat: no-repeat;
   background-size: auto;
+  transition-delay: 0.2s;
+  transform-origin: 0;
+}
+
+.heart_menu:hover {
+  animation: heart 0.2s ease-in-out;
 }
 
 .fa-regular.fa-heart {
   color: black;
-  transition: opacity 0.3s ease-in-out;
+
   position: relative;
 }
 
@@ -449,9 +462,19 @@ header img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   grid-area: 1/2;
-  transition: opacity 0.3s ease-in-out;
   position: relative;
 }
+
+@keyframes heart {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* END ANIMATION COEUR */
 
 .menu_selection {
   width: 10px;
