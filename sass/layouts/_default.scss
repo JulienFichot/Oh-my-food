@@ -71,6 +71,7 @@ h1 {
     background: linear-gradient($secondary, $primary);
     padding: 1rem 2.5rem;
     border-radius: 30px;
+    cursor: pointer;
     color: white;
     border: 1px;
     margin-top: 3%;
@@ -406,6 +407,7 @@ header img {
   font-size: 1.1rem;
   border-radius: 100px;
   color: #fff;
+  cursor: pointer;
   background-image: linear-gradient(
     0deg,
     rgba(147, 86, 220, 0.9),
@@ -437,7 +439,7 @@ header img {
 
 .heart_menu:hover .fa-solid.fa-heart {
   display: inline;
-  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  color: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
   background-repeat: no-repeat;
   background-size: auto;
   transition-delay: 0.2s;
@@ -533,7 +535,7 @@ coeur plein=<i class="fa-solid fa-heart"></i>
   right: 0;
   left: 0;
   margin: auto;
-  animation: spin_one 3s linear infinite;
+  animation: spin_one 2s linear infinite;
 }
 
 .secondary_circle {
@@ -551,7 +553,7 @@ coeur plein=<i class="fa-solid fa-heart"></i>
   right: 0;
   left: 0;
   margin: auto;
-  animation: spin_two 3s linear infinite;
+  animation: spin_two 2s linear infinite;
 }
 .tertiary_circle {
   border: 3px solid rgb(211, 52, 52);
@@ -568,7 +570,7 @@ coeur plein=<i class="fa-solid fa-heart"></i>
   right: 0;
   left: 0;
   margin: auto;
-  animation: spin_three 3s linear infinite;
+  animation: spin_three 2s linear infinite;
 }
 
 @keyframes spin_one {
@@ -608,20 +610,22 @@ coeur plein=<i class="fa-solid fa-heart"></i>
   }
 }
 
+/* Animations plats */
+
 .animation_one {
-  animation: slide_one 5s forwards;
+  animation: slide_one 2s forwards;
   opacity: 0;
 
   animation-delay: calc(1s / 5);
 }
 .animation_two {
-  animation: slide_one 7s forwards;
+  animation: slide_two 4s forwards;
   opacity: 0;
 
   animation-delay: calc(3s / 5);
 }
 .animation_three {
-  animation: slide_one 9s forwards;
+  animation: slide_three 6s forwards;
   opacity: 0;
 
   animation-delay: calc(5s / 5);
@@ -639,7 +643,7 @@ coeur plein=<i class="fa-solid fa-heart"></i>
 
 @keyframes slide_two {
   0% {
-    transform: translateY(50px);
+    transform: translateY(40px);
     opacity: 0%;
   }
   100% {
@@ -650,7 +654,7 @@ coeur plein=<i class="fa-solid fa-heart"></i>
 
 @keyframes slide_three {
   0% {
-    transform: translateY(180px);
+    transform: translateY(60px);
     opacity: 0%;
   }
   100% {
@@ -682,6 +686,9 @@ coeur plein=<i class="fa-solid fa-heart"></i>
   }
   .restaurants a {
     width: 50%;
+  }
+  .block_menu .title_restaurant {
+    padding: 3% 25%;
   }
 }
 
@@ -733,7 +740,7 @@ coeur plein=<i class="fa-solid fa-heart"></i>
     width: 80%;
     margin-left: 10%;
     .title_restaurant {
-      padding: 0 25%;
+      padding: 2% 30%;
     }
   }
 }
