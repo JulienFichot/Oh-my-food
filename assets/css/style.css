@@ -320,7 +320,7 @@ header img {
   padding-left: 5px;
   height: 70px;
 }
-.block_menu .card_menu:hover .menu_selection {
+.block_menu .card_menu:hovlection {
   width: 5rem;
   opacity: 1;
   margin-left: 3%;
@@ -391,30 +391,16 @@ header img {
 
 /* ANIMATION COEUR */
 .heart_menu {
-  font-size: 30px;
-}
-
-.heart_menu:hover {
-  display: inline;
+  font-size: 40px;
 }
 
 .heart_menu:hover .fa-regular.fa-heart,
 .heart_menu .fa-solid.fa-heart {
   display: none;
-  opacity: 100%;
 }
 
 .heart_menu:hover .fa-solid.fa-heart {
   display: inline;
-  color: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
-  background-repeat: no-repeat;
-  background-size: auto;
-  transition-delay: 0.2s;
-  transform-origin: 0;
-}
-
-.heart_menu:hover {
-  animation: heart 0.2s ease-in-out;
 }
 
 .fa-regular.fa-heart {
@@ -424,24 +410,17 @@ header img {
 
 .fa-solid.fa-heart {
   cursor: pointer;
-  opacity: 0%;
+  transition-delay: 0.2s;
+  animation: heart 0s ease-in-out;
   background-image: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  grid-area: 1/2;
   position: relative;
 }
 
-@keyframes heart {
-  0% {
-    transform: scale(0.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 /* END ANIMATION COEUR */
+
 .menu_selection {
   width: 10px;
   height: 100%;
