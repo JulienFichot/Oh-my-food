@@ -423,6 +423,36 @@ header img {
 
 /* ANIMATION COEUR */
 
+.fa-heart {
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  color: black;
+  font-size: 150px;
+}
+
+.fa-regular.fa-heart {
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.fa-solid.fa-heart {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+&__coeurs:hover {
+  .fa-regular.fa-heart {
+    opacity: 1;
+  }
+
+  .fa-solid.fa-heart {
+    opacity: 0;
+  }
+}
+
+/*
+
 .heart_menu {
   font-size: 30px;
 }
